@@ -312,8 +312,7 @@
 
                 if ( $.type(options.labels) === "array" ) {
 
-                    var labelIndex = Math.round( ( number - min ) / options.step );
-                    label = options.labels[labelIndex] || "";
+                    label = options.labels[number] || "";
 
                 } else if ( $.type( options.labels ) === "object" ) {
 
@@ -332,8 +331,7 @@
                         // set other labels, but our index should start at -1
                         // because of the first pip.
 
-                        var labelIndex = Math.round( ( number - min ) / options.step ) - 1;
-                        label = options.labels.rest[labelIndex] || "";
+                        label = options.labels.rest[ number - 1 ] || "";
 
                     } else {
 
